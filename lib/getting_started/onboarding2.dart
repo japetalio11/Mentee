@@ -30,7 +30,7 @@ class _FinishUpScreenState extends State<FinishUpScreen> {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -45,7 +45,7 @@ class _FinishUpScreenState extends State<FinishUpScreen> {
                     child: Container(
                       height: 8,
                       decoration: BoxDecoration(
-                        color: Color(0xFF0066FF),
+                        color: Color(0xFF4D94FF),
                         borderRadius: BorderRadius.circular(5),
                       ),
                     ),
@@ -53,7 +53,7 @@ class _FinishUpScreenState extends State<FinishUpScreen> {
                 ],
               ),
 
-              const SizedBox(height: 48),
+              const SizedBox(height: 64),
 
               // Main heading
               const Text(
@@ -72,7 +72,7 @@ class _FinishUpScreenState extends State<FinishUpScreen> {
               const Text(
                 'Create Your First Board',
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 15,
                   fontWeight: FontWeight.w500,
                   color: Colors.black,
                 ),
@@ -90,7 +90,7 @@ class _FinishUpScreenState extends State<FinishUpScreen> {
                   SizedBox(width: 4),
                   Text(
                     '*',
-                    style: TextStyle(color: Color(0xFF0066FF), fontSize: 13),
+                    style: TextStyle(color: Color(0xFF4D94FF), fontSize: 13),
                   ),
                 ],
               ),
@@ -109,7 +109,7 @@ class _FinishUpScreenState extends State<FinishUpScreen> {
                     borderSide: BorderSide(color: Color(0xFFF4F4F4)),
                   ),
                   focusedBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xFF0066FF)),
+                    borderSide: BorderSide(color: Color(0xFF4D94FF)),
                   ),
                   fillColor: Colors.transparent,
                   filled: true,
@@ -124,7 +124,7 @@ class _FinishUpScreenState extends State<FinishUpScreen> {
                 child: SizedBox(
                   width: double.infinity,
                   height: 60,
-                  child: ElevatedButton(
+                  child: TextButton(
                     onPressed: () {
                       Navigator.of(context).pushReplacement(
                         PageRouteBuilder(
@@ -138,8 +138,8 @@ class _FinishUpScreenState extends State<FinishUpScreen> {
                         ),
                       );
                     },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFF0066FF),
+                    style: TextButton.styleFrom(
+                      backgroundColor: Color(0xFF4D94FF),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),

@@ -6,6 +6,7 @@ Description: This file contains the implementation of the Sign In screen for the
  */
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:menti_application/entry/signup.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -33,15 +34,16 @@ class _LoginScreenState extends State<LoginScreen> {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const SizedBox(height: 16),
+
                 Align(
                   alignment: Alignment.topLeft,
                   child: IconButton(
-                    icon: const Icon(Icons.close, color: Color(0xFFA2A2A7)),
                     onPressed: () {
                       Navigator.of(context).pushReplacement(
                         PageRouteBuilder(
@@ -55,8 +57,18 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       );
                     },
+                    icon: SvgPicture.asset(
+                    'assets/images/exit.svg', // Add your SVG file path here
+                    color: const Color(0xFF707070),
+                    ),
+                    padding: const EdgeInsets.all(13),
+                    style: IconButton.styleFrom(
+                    backgroundColor: const Color(0xFFF4F4F4),
+                    shape: const CircleBorder(),
+                    ),
                   ),
                 ),
+
                 const SizedBox(height: 48),
 
                 const Text(
@@ -94,7 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       borderSide: BorderSide(color: Color(0xFFF4F4F4)),
                     ),
                     focusedBorder: const UnderlineInputBorder(
-                      borderSide: BorderSide(color: Color(0xFF0066FF)),
+                      borderSide: BorderSide(color: Color(0xFF4D94FF)),
                     ),
                     fillColor: Colors.transparent,
                     filled: true,
@@ -135,7 +147,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       borderSide: BorderSide(color: Color(0xFFF4F4F4)),
                     ),
                     focusedBorder: const UnderlineInputBorder(
-                      borderSide: BorderSide(color: Color(0xFF0066FF)),
+                      borderSide: BorderSide(color: Color(0xFF4D94FF)),
                     ),
                     fillColor: Colors.transparent,
                     filled: true,
@@ -145,10 +157,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   width: double.infinity,
                   height: 60,
-                  child: ElevatedButton(
+                  child: TextButton(
                     onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF0066FF),
+                    style: TextButton.styleFrom(
+                      backgroundColor: const Color(0xFF4D94FF),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -176,8 +188,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: const Text(
                         'Sign Up',
                         style: TextStyle(
-                          color: Color(0xFF0066FF),
-                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF4D94FF),
+                          fontWeight: FontWeight.w500,
                           fontSize: 13,
                         ),
                       ),
